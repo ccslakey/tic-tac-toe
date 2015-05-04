@@ -7,7 +7,7 @@ window.addEventListener('load', function () {
 /*MINIMUM FEATURE REQUIREMENTS
 	
 -After a cell is clicked, use javascript to add a class to display separate colors
-*/
+*//////
 var mover = "x";
 var moveChanger = function(){
   if (mover ==="x"){
@@ -28,11 +28,16 @@ var moveColor = function(){
   return colorer
 };
 /* trying to get elements by class name. how to get them into an array?
+///like so////
+var boxesArr= [].slice.call(boxes);
+//and then??//
 var boxes = document.getElementsByClassName('box')
   for(var i=0; i<boxes.length-1; i++){
   boxes[i].addEventListener('click' , function (event){
       boxes[i].innerHTML = mover;
       boxes[i].style.backgroundColor = moveColor();
+
+
 })};
 */
 var boxesListen = function(){
@@ -104,23 +109,23 @@ var boxesListen = function(){
 var resetButton = function(){
    var reseter = document.querySelector('button');
    reseter.addEventListener('click' , function (event){
-    box1.innerHTML = 'reset';
+    box1.innerHTML = '&nbsp';
     box1.style.backgroundColor = 'white';
-    box2.innerHTML = 'reset';
+    box2.innerHTML = '&nbsp';
     box2.style.backgroundColor = 'white';
-    box3.innerHTML = 'reset';
+    box3.innerHTML = '&nbsp';
     box3.style.backgroundColor = 'white';
-    box4.innerHTML = 'reset';
+    box4.innerHTML = '&nbsp';
     box4.style.backgroundColor = 'white';
-    box5.innerHTML = 'reset';
+    box5.innerHTML = '&nbsp';
     box5.style.backgroundColor = 'white';
-    box6.innerHTML = 'reset';
+    box6.innerHTML = '&nbsp';
     box6.style.backgroundColor = 'white';
-    box7.innerHTML = 'reset';
+    box7.innerHTML = '&nbsp';
     box7.style.backgroundColor = 'white';
-    box8.innerHTML = 'reset';
+    box8.innerHTML = '&nbsp';
     box8.style.backgroundColor = 'white';
-    box9.innerHTML = 'reset';
+    box9.innerHTML = '&nbsp';
     box9.style.backgroundColor = 'white';
 })
 };
