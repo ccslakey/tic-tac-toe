@@ -1,24 +1,58 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <script src='ticTacToe.js'></script>
-    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link href="ttt-solution.css" rel="stylesheet">
+    <script src='ttt-solution.js'></script>
   </head>
   <body>
-    <h1>Tic Tac Toe</h1>
+    <h1 class='title'>Tic-Tac-Toe</h1>
+
     <div id='board'>
-      <!-- the `&nbsp;` in each div is a non-breakable space.
-           It prevents the div from collapsing. -->
-      <div class='box' id='box1'>&nbsp;</div>
-      <div class='box' id='box2'>&nbsp;</div>
-      <div class='box' id='box3'>&nbsp;</div>
-      <div class='box' id='box4'>&nbsp;</div>
-      <div class='box' id='box5'>&nbsp;</div>
-      <div class='box' id='box6'>&nbsp;</div>
-      <div class='box' id='box7'>&nbsp;</div>
-      <div class='box' id='box8'>&nbsp;</div>
-      <div class='box' id='box9'>&nbsp;</div>
-      <button>Reset</button>
+
+      <!-- Wrap the players in a div so they can be stacked on time of
+      one another and be displayed inline with the reset button -->
+      <div class='players'>
+        <p id='player_x'>Player X </p>
+        <p id='player_o'>Player O </p>
+      </div>
+
+      <div class='reset'>
+        <button>Reset</button>
+      </div>
+
+      <br>
+
+      <div class='square'>
+        <p class='blank'></p>
+      </div>
+      <div class='square'>
+        <p class='blank'></p>
+      </div>
+      <div class='square'>
+        <p class='blank'></p>
+      </div>
+      <br>
+      <div class='square'>
+        <p class='blank'></p>
+      </div>
+      <div class='square'>
+        <p class='blank'></p>
+      </div>
+      <div class='square'>
+        <p class='blank'></p>
+      </div>
+      <br>
+      <div class='square'>
+        <p class='blank'></p>
+      </div>
+      <div class='square'>
+        <p class='blank'></p>
+      </div>
+      <div class='square'>
+        <p class='blank'></p>
+      </div>
+
     </div>
   </body>
 </html>
