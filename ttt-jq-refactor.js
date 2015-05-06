@@ -1,5 +1,6 @@
-window.addEventListener('load', function () {
-
+//window.addEventListener('load', function (event) {
+$(document.ready){
+  /*old JS 
   // Grab all the necessary elements
   var board = document.querySelector('body');
   var squares = document.querySelectorAll('.square p');
@@ -10,11 +11,21 @@ window.addEventListener('load', function () {
   var turn = 'X';
   var playCount = 0;
   var xConsecWins = 0;
+  var oConsecWins = 0;*/
+  var $board = $('body');
+  var $squares = $('.square p');
+  var $squareBorders = $('.square');
+  var $reset = $('.reset');
+  var $playerX = $('#plaer_x');
+  var $playerO = #('#player_o');
+  var turn = 'x'
+  var playCount = 0
+  var xConsecWins = 0;
   var oConsecWins = 0;
 
   // reset the turn indicator
   displayTurn();
-
+  /*js
   // Listen for clicks on squares
   // Track variable 'turn' for next move and end of game
   // Disallow repeated moves on the same square
@@ -32,10 +43,22 @@ window.addEventListener('load', function () {
         alert('That square has already been played!');
       }
     });
-  }
+  }*/
+  $($squares.each('click'(function() {
+   if (this.()==='' && turn !=='game over'){
+      setSqaure(this);
+   } 
+   else if (turn ==='game_over'){
+    alert("The game is over!  Click 'reset' to play again.");
+   }
+   else {
+        alert('That square has already been played!');
+      }
+})));
+    
 
   // Reset the board
-  reset.addEventListener('click', function () {
+  reset.addEventListener('click', function (event) {
     for (var i = 0; i < squares.length; i++) {
       squares[i].innerHTML = '';
       squares[i].setAttribute('class', 'blank');
